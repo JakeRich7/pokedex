@@ -1,0 +1,21 @@
+{
+  "name": "pokedex",
+  "version": "1.0.0",
+  "description": "Created to be tested! I'll be using playwright and cucumber to test this pokedex...",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JakeRich7/pokedex.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JakeRich7/pokedex/issues"
+  },
+  "homepage": "https://github.com/JakeRich7/pokedex#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.23.0"
+  }
+}
