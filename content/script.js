@@ -12,8 +12,10 @@ window.addEventListener('DOMContentLoaded', async (event) => {
         
         let parent = e.target;
         if (e.target.childNodes[1] === undefined) {
+            let newDiv = document.createElement('div');
             let node = document.createTextNode('heyo potato');
-            parent.appendChild(node);
+            newDiv.appendChild(node);
+            parent.appendChild(newDiv);
         } else {
             parent.removeChild(parent.lastChild);
         }
@@ -23,7 +25,8 @@ window.addEventListener('DOMContentLoaded', async (event) => {
         let parent = document.createElement("div");
         let node = document.createTextNode(pokeArray[i].name);
         parent.appendChild(node);
-        parent.setAttribute("url", pokeArray[i].url)
+        parent.setAttribute("url", pokeArray[i].url);
+        parent.classList.add('onePokemon')
         const mainBody = document.querySelector('.body');
         mainBody.appendChild(parent);
     }

@@ -1,0 +1,8 @@
+.onePokemon > div {
+    background-color: aqua;
+}
+
+.onePokemon:hover {
+    cursor: pointer;
+    background-color: rgba(121, 121, 121, .5);
+}
