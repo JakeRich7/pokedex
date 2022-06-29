@@ -1,3 +1,3 @@
 # Basic Pokedex
 
-## Local Use Instructions:
+Created to be tested! I'll be using playwright and cucumber to test this pokedex...
