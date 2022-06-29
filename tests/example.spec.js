@@ -1,9 +1,9 @@
 const { test, expect } = require('@playwright/test');
 
 test('basic test', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
-  const title = page.locator('.navbar__inner .navbar__title');
-  await expect(title).toHaveText('Playwright');
+  await page.goto('https://jakerich7-pokedex.netlify.app/');
+  const title = page.locator('.header');
+  await expect(title).toHaveText('Pokedex:');
 });
 
 // // @ts-check
