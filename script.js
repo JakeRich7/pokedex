@@ -5,17 +5,25 @@ window.addEventListener('DOMContentLoaded', async (event) => {
     let pokeArray = allPokemon.results;
 
     let togglePokemonDetails = async (e) => {
+        if (!e.target.getAttribute("url")) {
+            return
+        }
+
         let singlePokemon = await fetch(e.target.getAttribute("url"))
         .then(response => response.json());
 
-        console.log(singlePokemon);
-        
         let parent = e.target;
         if (e.target.childNodes[1] === undefined) {
+            pokeName = singlePokemon.name[0].toUpperCase();
+            pokeName += singlePokemon.name.substr(1);
+            pokeImagesArr = singlePokemon.sprites;
+
             let newDiv = document.createElement('div');
-            // let node = document.createTextNode('heyo potato');
-            // newDiv.appendChild(node);
             parent.appendChild(newDiv);
+            parent.lastChild.innerHTML = `
+                <div>Name: ${pokeName}</div>
+                <img class="pokeImage" src="${pokeImagesArr.front_default}" alt="${pokeName} Pic">
+            `;
         } else {
             parent.removeChild(parent.lastChild);
         }
