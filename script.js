@@ -13,8 +13,8 @@ window.addEventListener('DOMContentLoaded', async (event) => {
         let parent = e.target;
         if (e.target.childNodes[1] === undefined) {
             let newDiv = document.createElement('div');
-            let node = document.createTextNode('heyo potato');
-            newDiv.appendChild(node);
+            // let node = document.createTextNode('heyo potato');
+            // newDiv.appendChild(node);
             parent.appendChild(newDiv);
         } else {
             parent.removeChild(parent.lastChild);
