@@ -4,7 +4,9 @@
   "description": "Created to be tested! I'll be using playwright and cucumber to test this pokedex...",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js"
+    "test": "cucumber-js && npx playwright test",
+    "c": "cucumber-js",
+    "p": "npx playwright test"
   },
   "repository": {
     "type": "git",
